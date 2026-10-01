@@ -10,7 +10,9 @@ The spoken script is about 1,225 words, which lands around 9:40 at a normal spea
 - **[NEXT SLIDE]** moves to the next slide.
 - Slide 3's first click builds the whole AI POD on its own. Let it finish before talking.
 - There are **11 clicks** in total: none on the title card, two on slide 1, one on slide 2, three on slide 3, two on slide 4 and three on slide 5.
-- Keyboard: arrow keys or space to advance, `F` for full screen, `Home` to jump back to the title card.
+- Keyboard: arrow keys, space or a clicker to advance, `F` for full screen, `Home` to jump back to the title card. Don't advance with the mouse, because a click on the left half of the screen goes back a step.
+- Jumping around in Q&A: the number keys count the title card, so press the slide number plus one (press 3 to get to slide 2 / 5, the GPU demo).
+- Before the day, ask the coordinator whether a title slide counts toward the five-slide limit. If it does, open `index.html#2` (or press the right arrow once before you start sharing) and say the title card's intro line over slide 1 before its first click. Slide 1 then runs 0:00 to 2:05.
 - The deck no longer needs the internet. The Inter font is built into the file, so it looks the same on any laptop.
 
 ---
@@ -63,7 +65,7 @@ Now watch what happens when one link has a problem.
 
 Now the link between GPU 2 and GPU 3 is congested. You can see the data jammed up on that red link. GPU 2 and GPU 3 can't finish their swap, and since every GPU has to finish before the next step can start, the other six sit there waiting in orange. Some data still trickles around the ring, but nowhere near as much. It's like a group project where everyone waits on the slowest person.
 
-Look at the output. We drop from about 50 steps a minute to about 20. Utilization falls under 40%, and the same job takes more than twice as long.
+Look at the output. We drop from 50 steps a minute to 21. Utilization falls under 40%, and the same job takes more than twice as long.
 
 So the point isn't that the link is slow. The point is that a very expensive compute system is waiting on the network. That's why Cisco's AI networking focuses on low latency, lossless Ethernet, and handling congestion, not just bigger pipes.
 
@@ -79,17 +81,17 @@ So how does Cisco actually solve this?
 
 This is a Cisco AI POD. It's a prevalidated building block where every piece is designed and tested to work together. The solid tags are pieces Cisco builds, and the outlined tags are partner pieces Cisco has validated.
 
-The GPU compute is Cisco UCS servers with NVIDIA GPUs inside. The highlighted piece, the network, is the fix for the jam you just saw. Cisco's Nexus switches don't drop data when they get busy, they tell the senders to slow down before a jam forms, and they spread traffic across more than one path so no single link holds everyone up. Storage comes from certified partners, so the customer isn't locked into one box. The AI software supports NVIDIA AI Enterprise and Red Hat OpenShift. And management is Cisco too, with Intersight for the servers and Nexus Dashboard for the network. The whole POD follows a Cisco Validated Design, which is a tested blueprint.
+The GPU compute is Cisco UCS servers with NVIDIA GPUs inside. The highlighted piece, the network, is the fix for the jam you just saw. Cisco's Nexus switches don't drop data when they get busy, they tell the senders to slow down before a jam forms, and they spread traffic across more than one path so no single link holds everyone up. Storage comes from certified partners, so you're not locked into one box. The AI software supports NVIDIA AI Enterprise and Red Hat OpenShift. And management is Cisco too, with Intersight for the servers and Nexus Dashboard for the network. The whole POD follows a Cisco Validated Design, which is a tested blueprint.
 
 **[CLICK: the Secure AI Factory frame wraps around it]**
 
-Now if we zoom out, Cisco wraps the whole POD with security through Cisco AI Defense, which protects the AI models and apps running on it, observability through Splunk, which is part of Cisco now, and one point of contact for support through Cisco's services team. Together, this is the Cisco Secure AI Factory with NVIDIA.
+Now if we zoom out, Cisco wraps the whole POD in three more pieces. Security is Cisco AI Defense, which protects the AI models and apps running on it. Observability is Splunk, which is part of Cisco now. And support is one point of contact through Cisco's services team. Together, this is the Cisco Secure AI Factory with NVIDIA.
 
 **[CLICK: the takeaway appears on the right]**
 
-So the customer isn't buying GPUs, switches, and storage separately. They're buying productive AI capacity. Cisco builds the servers, the network, and the management, and validates the rest, so the customer's team doesn't have to be the integrator.
+So you're not buying GPUs, switches, and storage separately. You're buying AI capacity that actually gets work done. Cisco builds the servers, the network, and the management, and validates the partner pieces, so your team doesn't have to be the integrator.
 
-The next question a customer usually asks is whether they have to tear out what they already have. They don't.
+The next question you're probably asking is whether you have to tear out what you already have. You don't.
 
 **[NEXT SLIDE]**
 
@@ -97,17 +99,17 @@ The next question a customer usually asks is whether they have to tear out what 
 
 ## Slide 4: Add AI. Don't rebuild everything. (6:35 to 7:55)
 
-This is the customer's data center today: their apps and data, their network, and the team and tools that run it. None of that goes away.
+This is your data center today: your apps and data, your network, and the team and tools that run it. None of that goes away.
 
 **[CLICK: the AI POD and the Ethernet link appear]**
 
-The Cisco AI POD gets added right next to it. Cisco's approach is to modernize in steps, not rip and replace. The two connect over Ethernet, which is the same kind of networking their team already runs, so a lot of their tools and skills carry over. Cisco then tunes it for the kind of AI traffic we just saw jam.
+The Cisco AI POD gets added right next to it. Cisco's approach is to modernize in steps, not rip and replace. The two connect over Ethernet, which is the same kind of networking your team already runs, so a lot of your tools and skills carry over. Cisco then tunes it for the kind of AI traffic we just saw jam.
 
 **[CLICK: the extra PODs and management options appear]**
 
-They also don't have to build for the biggest version on day one. They start with the size they need now and add PODs as demand grows. The one thing to check first is power and cooling, since that often decides how big the first POD can be.
+You also don't have to build for the biggest version on day one. You start with the size you need now and add PODs as demand grows. The one thing to check first is power and cooling, since that often decides how big the first POD can be.
 
-And they get to choose how they run it: on-prem with Nexus Dashboard, or from the cloud with Nexus Hyperfabric. Either way, the hardware stays on-prem.
+And you get to choose how you run it: on-prem with Nexus Dashboard, or from the cloud with Nexus Hyperfabric. Either way, the hardware stays on-prem.
 
 So that's the solution. Now, why does this matter right now?
 
@@ -119,7 +121,7 @@ So that's the solution. Now, why does this matter right now?
 
 Everyone is rushing into AI right now, and the numbers show it.
 
-**[CLICK: the three stats build in]**
+**[CLICK: the three stats build in, then the "Idle GPUs" line]**
 
 In a 2026 survey Cisco ran of 2,500 CEOs, 65% said they worry they're underinvesting in AI, up from 53% the year before. At the same time, in a survey Omdia ran for Cisco, 67% of infrastructure leaders expect AI traffic to max out their network within the next year. And Cisco's 2025 AI Readiness Index found only 22% of organizations rate their network as optimal for AI workloads.
 
@@ -141,11 +143,12 @@ Thank you. I'm happy to take any questions.
 
 ## If running long
 
-These three cuts save about 20 seconds without losing the story:
+These four cuts save about 15 to 20 seconds without losing the story:
 
-1. Slide 3: "The whole POD follows a Cisco Validated Design, which is a tested blueprint."
-2. Slide 4: "Either way, the hardware stays on-prem."
-3. Slide 5: "up from 53% the year before"
+1. Slide 2: "Some data still trickles around the ring, but nowhere near as much."
+2. Slide 3: "The whole POD follows a Cisco Validated Design, which is a tested blueprint."
+3. Slide 4: "Either way, the hardware stays on-prem."
+4. Slide 5: "up from 53% the year before"
 
 Keep the healthcare, finance, and government example on slide 1. It's the concrete picture a non-expert needs.
 
@@ -155,15 +158,15 @@ Keep the healthcare, finance, and government example on slide 1. It's the concre
 
 **About the demo (slide 2)**
 
-- The numbers are simulated and illustrative, not measured. They're consistent with each other: about 50 steps a minute at 90% busy becomes about 21 steps a minute, under 40% busy, and 4.0 hours becomes 9.7 hours.
+- The numbers are simulated and illustrative, not measured, but they hang together. A step takes 1.2 seconds when healthy and 2.9 seconds when jammed. That's 50 steps a minute versus about 20.7, which the screen rounds to 21. The same amount of work then takes 4.0 × 50 ÷ 20.7, about 9.7 hours, and the GPUs go from about 90% busy to under 40%.
 - The ring is how the GPUs pass results to each other, not how they're cabled. Physically every GPU connects through switches, and a jam happens when a lot of traffic hits the same switch port. Inside one server, eight GPUs usually talk over NVLink. The Ethernet AI network matters once a job spans many servers, which is where the slowest-link effect really bites.
 - What they swap is gradients, and the operation is called an all-reduce. Not every training method syncs after every step, but this kind of synchronized training is common.
 
 **How Cisco handles the jam (slide 3)**
 
-- "Doesn't drop data" is lossless Ethernet using PFC, which pauses traffic instead of dropping it. "Tells senders to slow down" is ECN. The GPU traffic itself runs as RoCEv2, which is RDMA over Ethernet.
-- "Spreads traffic across paths" is congestion-aware load balancing. Cisco's newest switch chip, Silicon One G300 (announced February 2026, 102.4 Tbps), calls this Intelligent Collective Networking.
-- If asked to put it in one line: lossless Ethernet with PFC and ECN today, plus smarter load balancing as clusters get bigger.
+- "Doesn't drop data" is lossless Ethernet using PFC, which pauses traffic instead of dropping it. "Tells senders to slow down" is ECN. Strictly, the switch marks the packets and the receiving network card tells the sender to slow down, ideally before the switch ever has to pause anything. The GPU traffic itself runs as RoCEv2, which is RDMA over Ethernet.
+- "Spreads traffic across paths" is dynamic load balancing. Today's Nexus 9000 switches can do it for RoCE traffic in AI training networks. Cisco's newest switch chip, Silicon One G300 (announced February 2026, 102.4 Tbps), goes further with what Cisco calls Intelligent Collective Networking: a shared buffer, path-based load balancing and telemetry.
+- If asked to put it in one line: lossless Ethernet with PFC and ECN, plus smarter load balancing as clusters get bigger.
 
 **Competitors**
 
@@ -178,7 +181,7 @@ Keep the healthcare, finance, and government example on slide 1. It's the concre
 - Not everything is generally available. Cisco marks some AI networking and AgenticOps features as in development or "when and if available," so I'd confirm what's orderable before promising anything.
 - Pricing isn't public. It depends on the configuration and subscription tiers, so I wouldn't make cost claims without a sizing exercise.
 - Compliance certifications are product specific. "Secure" isn't the same as a SOC 2, HIPAA or FedRAMP certification, so I'd pull the current documentation for the customer's industry.
-- Cisco IQ only covers Cisco gear today. Third-party support is planned, not shipped.
+- Lossless isn't free. If PFC pauses too much, congestion can spread backward through the network (a "pause storm"). That's why Cisco pairs it with ECN so senders slow down early, Nexus switches have a PFC watchdog to stop a pause storm, and newer chips lean more on smarter load balancing.
 
 **Where it's headed next**
 
@@ -188,7 +191,9 @@ Keep the healthcare, finance, and government example on slide 1. It's the concre
 **Facts worth having ready**
 
 - AI POD sizes scale in steps, for example 32, 64 and 128 GPUs, and can keep growing from there.
-- Certified storage partners: VAST Data, NetApp (FlexPod), Pure Storage (FlashStack), Hitachi Vantara and Nutanix.
+- Certified storage partners: VAST Data, NetApp (FlexPod), Everpure (FlashStack), Hitachi Vantara and Nutanix. Everpure is Pure Storage's new name since February 2026, so either name works if someone asks.
+- "So what does Cisco actually build?" In the AI POD I showed, the servers are Cisco UCS, plus the network, the management, the security and the support. For the new rack-scale option, Cisco validates and sells Supermicro servers, which is the same validate-the-partner model as storage.
+- The slide 3 footnote, "Options aligned with NVIDIA's Enterprise Reference Architecture": that's NVIDIA's published blueprint for enterprise GPU clusters. Cisco wasn't on NVIDIA's first list in late 2024, said in February 2025 that it would build these designs, and NVIDIA's docs now list Cisco designs like the AI POD and Hyperfabric AI. "Aligned" is the careful word, since NVIDIA endorses specific configurations, not every possible POD.
 - Management: Intersight for compute, Nexus Dashboard for on-prem networking, Nexus Hyperfabric for cloud-managed networking. With Hyperfabric the hardware is still on-prem. Only the controller is in Cisco's cloud.
 - Security: AI Defense protects the AI models and apps. Hybrid Mesh Firewall enforces policy across the infrastructure. Splunk handles observability and security analytics.
 - Survey details: the CEO study covered 2,500 CEOs in 23 countries (data from January 2026). The Omdia study covered more than 1,200 infrastructure leaders (Cisco blog, August 18, 2026). The 2025 AI Readiness Index covered more than 8,000 leaders in 30 markets, and 81% of the most AI-ready companies rate their network as optimal, compared with 22% overall.
@@ -196,26 +201,28 @@ Keep the healthcare, finance, and government example on slide 1. It's the concre
 
 **How I used AI, and what it got wrong**
 
-I used AI to research Cisco's AI pages and build a research brief, then to draft the deck, and then to fact-check the deck against Cisco's own sources. I made the calls on what to keep and what to cut. These are the things the fact-check caught:
+*[Only claim what you've checked yourself. Before the interview, open the sources for the first three items so you can talk about them first-hand.]*
+
+I used AI to research Cisco's AI pages and build a research brief, then to draft the deck, and then to fact-check the deck against Cisco's own sources. The three mistakes worth talking about:
 
 1. **The wrong year on a stat.** The 22% figure was labeled "Cisco AI Readiness Index, 2026." It's actually from the 2025 Index. My own research notes had warned about this exact mix-up, probably because Cisco's 2026 CEO study sits on the same Readiness Index pages.
-2. **An overclaim.** The draft said Cisco does "almost every piece" itself. The GPUs, the AI software, and the storage are partner pieces, which the slide's own tags show. Now I say exactly what Cisco builds.
-3. **A tool in the wrong category.** Cisco Validated Designs were listed as management software. They're tested blueprints. The management row is now Intersight and Nexus Dashboard.
-4. **A quote that wasn't really a quote.** "AI performance is often limited by data movement, not raw compute" sounded like Cisco but I couldn't find it on any Cisco page. I switched to Cisco's real wording from the Silicon One G300 launch: data movement is the key to efficient AI compute, and the network becomes part of the compute itself.
-5. **Stronger than the source.** "Nothing gets ripped out" was stronger than Cisco's own phrase, "no rip-and-replace," and it clashed with slide 1's point about power and cooling. The slide now uses Cisco's phrase, and I call out the facility check out loud.
-6. **Numbers that didn't add up.** In the simulation, 41% utilization didn't match the other numbers. It's now under 40%, which is consistent with the slower step rate.
-7. **Layout bugs a human eye catches.** Some text was being shrunk to fit, one row of boxes hung 16 pixels past the box above it, and a few lines ended with one word on its own. Those are fixed.
+2. **An overclaim.** The draft said Cisco does "almost every piece" itself. The GPUs inside Cisco's servers are NVIDIA's, and the AI software and storage are partner pieces, which the outlined tags show. Now I say exactly what Cisco builds.
+3. **A quote that wasn't really a quote.** "AI performance is often limited by data movement, not raw compute" sounded like Cisco, but I couldn't find it on any Cisco page. I switched to Cisco's real wording from the Silicon One G300 launch: data movement is the key to efficient AI compute, and the network becomes part of the compute itself.
+
+Smaller ones, if there's time: Cisco Validated Designs were listed as management software when they're really tested blueprints, and "Nothing gets ripped out" was stronger than Cisco's own phrase, "no rip-and-replace." An AI design review also flagged layout problems, like text being shrunk to fit, and I checked each one on screen.
+
+**One AI suggestion I didn't take.** A review said the demo's 9.7 hours should be 9.5, because 4.0 × 50 ÷ 21 is 9.5. But the simulation actually runs at 20.7 steps a minute and only shows it rounded to 21, so 9.7 was right and I kept it. Checking the AI's corrections matters as much as checking its first draft.
 
 ---
 
 ## What changed in the deck
 
-- **New title card** with the four questions from the brief. It has no page number, so the content slides still read 1/5 to 5/5. (The brief says a maximum of five slides. Most people won't count a title card, but if the coordinator does, the title card can be skipped and the deck still works on its own.)
+- **New title card** with the four questions from the brief. It has no page number, so the content slides still read 1/5 to 5/5. The brief says a maximum of five slides, so check with the coordinator first. The "How to use this" section explains how to skip it.
 - **Small section labels** above each title (01 The problem, 02 How it works, 03 How it fits, 04 Why now) so the assessors can see each question being answered.
-- **Slide 1:** the title no longer leaves "lives" alone on line two, and the warning bar now looks like a warning, with "Most teams have never built one." on its own amber line.
-- **Slide 2:** "Simulated, illustrative numbers" shows from the start, the output number turns amber when the link jams like the other two numbers do, the numbers are consistent with each other, and the scoreboard uses the same font as the rest of the deck.
-- **Slide 3:** "Red Hat OpenShift," the AI network tile now says "built to avoid jams" to connect back to slide 2, management is Intersight and Nexus Dashboard, the legend appears before the tags it explains, the bottom row lines up with the POD, the tiles are no longer shrunk, and the takeaway gets its own click.
-- **Slide 4:** the growth column now shows two extra AI PODs with "Add PODs as demand grows," the empty space in the two big boxes is gone, and the captions read "Familiar tools and skills carry over" and "No rip-and-replace."
+- **Slide 1:** the title no longer leaves "lives" alone on line two, and the warning bar now looks like a warning, with "Most teams have never built one." on its own amber line. The network card in the corner also prints properly now (it used to print as an empty box).
+- **Slide 2:** "Simulated, illustrative numbers" shows from the start, the output number turns amber when the link jams like the other two numbers do, the numbers are consistent with each other, and the scoreboard uses the same font as the rest of the deck (the arrow in "GPU 2 to 3" is now a word so it looks the same on every laptop).
+- **Slide 3:** "Red Hat OpenShift," the takeaway says Cisco "validates the partner pieces," the AI network tile now says "built to avoid jams" to connect back to slide 2, management is Intersight and Nexus Dashboard, the legend appears before the tags it explains, the bottom row lines up with the POD, the tiles are no longer shrunk, and the takeaway gets its own click.
+- **Slide 4:** the growth column now shows two extra AI PODs with "Add PODs as demand grows," the rows now fill the two big boxes, and the captions read "Familiar tools and skills carry over" and "No rip-and-replace."
 - **Slide 5:** the title states the takeaway ("Few are ready."), the 22% stat is labeled 2025, the 67% card is back to full size, "Idle GPUs" is amber to echo slide 2, the quote breaks on the natural pause, and the closing line is bigger and gets its own click.
 
 ---
@@ -236,3 +243,6 @@ I used AI to research Cisco's AI pages and build a research brief, then to draft
 - Cisco AI POD for training design guide (familiar tools, scale units): https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ai_pod_for_training_design.html
 - Cisco newsroom, Secure AI Factory rack-scale expansion, Aug 2026: https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m08/cisco-secure-ai-factory-nvidia-rack-scale.html
 - Cisco newsroom, Patrick Morrissey executive bio: https://newsroom.cisco.com/c/r/newsroom/en/us/executives/patrick-morrissey.html
+- Cisco Nexus 9000 AI networking white paper (ECN first, PFC as a fail-safe): https://www.cisco.com/c/en/us/products/collateral/networking/cloud-networking-switches/nexus-9000-switches/nexus-9000-ai-networking-wp.html
+- NVIDIA Enterprise Reference Architectures (lists Cisco designs): https://docs.nvidia.com/enterprise-reference-architectures/index.html
+- DCD, Pure Storage rebrands to Everpure: https://www.datacenterdynamics.com/en/news/pure-storage-rebrands-to-everpure-announces-1touch-acquisition/
